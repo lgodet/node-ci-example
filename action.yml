@@ -1,0 +1,12 @@
+name: "Custom action"
+description: "Greet someone"   
+inputs: 
+  name:
+    description: "the name"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: "Great the user"
+      run: echo "Hello ${{ inputs.name }}."
+      shell: bash
